@@ -16,5 +16,8 @@ const Color kSelectionContainerColor = Color(0xFF23252B);
 const Color kGoalContainerColor = Color(0xFF1E1E1E);
 const Color kSleepContainerColor = Color(0xFF6DCFD0);
 const Color kLinearBarColor = Color(0xFFF3F3F3);
-
-
+const Color kLoginTextColor = Color(0xFFD7D8D9);
+const Color kLabelTextColor = Color(0xFF393C43);
+const Color kForgotPasswordTextColor = Color(0xFF0CA0EF);
+const Color kBottomNavigationColor = Color(0xFF1F334A);
+const Color kBottomNavBarScreenColor = Color(0xFF252C2F);

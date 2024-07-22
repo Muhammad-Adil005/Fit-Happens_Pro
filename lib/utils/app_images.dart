@@ -26,3 +26,9 @@ String kBackgroundImage5 = "$basePath/background5.png";
 String kSelectionImage = "$basePath/selection.png";
 String kFemaleGenderImage = "$basePath/genderfemale.png";
 String kMaleGenderImage = "$basePath/gendermale.png";
+
+String kFacebookImage = "$basePath/facebook.png";
+String kGoogleImage = "$basePath/google.png";
+String kTwitterImage = "$basePath/twitter.png";
+String kFoxImage = "$basePath/fox.png";
+String kPircerImage = "$basePath/pircer.png";
