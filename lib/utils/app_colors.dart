@@ -21,3 +21,8 @@ const Color kLabelTextColor = Color(0xFF393C43);
 const Color kForgotPasswordTextColor = Color(0xFF0CA0EF);
 const Color kBottomNavigationColor = Color(0xFF1F334A);
 const Color kBottomNavBarScreenColor = Color(0xFF252C2F);
+const Color kPercentIndicatorContainerColor = Color(0xff24262B);
+const Color kBlueColor = Color(0xff0CA0EF);
+const Color kAlreadyDoneTextColor = Color(0xff676C75);
+
+const Color kDairyPortionTextColor = Color(0xff7C7D80);

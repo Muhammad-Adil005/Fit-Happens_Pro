@@ -1,7 +1,10 @@
+import 'package:fit_happens_pro/views/Screens/bottomNavBar/RoutineMatchProfile/routine_match_profile_screen.dart';
+import 'package:fit_happens_pro/views/Screens/bottomNavBar/workoutRestDay/work_out_restday.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 import '../../../utils/app_colors.dart';
+import '../bottomNavBar/groceryLists/groceryList1/grocery_list1.dart';
 import '../bottomNavBar/homeContent/home_Content.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -22,10 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> _buildScreens() {
     return [
-      HomeContent(),
-      EatScreen(),
-      CenterScreen(),
-      GroceryScreen(),
+      const HomeContent(),
+      const GroceryList1Screen(),
+      const WorkOutRestDayScreen(),
+      const RoutineMatchProfileScreen(),
       MoreScreen(),
     ];
   }

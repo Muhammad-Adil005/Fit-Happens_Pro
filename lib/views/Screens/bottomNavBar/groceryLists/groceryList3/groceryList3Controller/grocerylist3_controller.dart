@@ -1,3 +1,3 @@
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
-class GroceryList2ScreenController extends GetxController {}
+class GroceryList3ScreenController extends GetxController {}

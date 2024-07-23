@@ -6,10 +6,10 @@ import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 import '../../../../../utils/app_colors.dart';
 import '../../../../../utils/app_images.dart';
-import 'groceryList3Controller/grocerylist3_controller.dart';
+import 'groceryList4Controller/grocerylist4_controller.dart';
 
-class GroceryList3Screen extends GetView<GroceryList3ScreenController> {
-  const GroceryList3Screen({super.key});
+class GroceryList4Screen extends GetView<GroceryList4ScreenController> {
+  const GroceryList4Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -203,144 +203,194 @@ class GroceryList3Screen extends GetView<GroceryList3ScreenController> {
               ),
               SizedBox(height: 32.h),
               Container(
-                width: 343.w,
-                height: 270.h,
+                height: 363.h,
+                width: 354.w,
                 color: kPercentIndicatorContainerColor,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 50.h,
-                      width: double.infinity,
-                      color: kBlueColor,
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 13.h, horizontal: 16.w),
-                        child: Text(
-                          'DAIRY AND EGG PRODUCTS',
-                          style: GoogleFonts.openSans(
-                            color: kWhiteTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14.sp,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 16.h),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const SizedBox(),
+                          Row(
+                            children: [
+                              Image.asset(kQuestionMark,
+                                  height: 24.h, width: 24.w),
+                              SizedBox(width: 8.w),
+                              Text(
+                                'Flour tortillas',
+                                style: GoogleFonts.openSans(
+                                  color: kWhiteTextColor,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14.sp,
+                                ),
+                              ),
+                            ],
                           ),
+                          Padding(
+                            padding: EdgeInsets.only(right: 4.w),
+                            child: Image.asset(kCrossCircle,
+                                height: 24.h, width: 24.w),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 8.h),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 4.w),
+                        child: Container(
+                          height: 2.h,
+                          color: kWhiteTextColor,
                         ),
                       ),
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Low-fat flavored yogurt',
-                                    style: GoogleFonts.openSans(
-                                      color: kWhiteTextColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 16.sp,
-                                    ),
-                                  ),
-                                  Text(
-                                    '4 container (6oz) (680g)',
-                                    style: GoogleFonts.openSans(
-                                      color: kDairyPortionTextColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 10.sp,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                'Hel',
-                                style: GoogleFonts.openSans(
-                                  color: kWhiteTextColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16.sp,
-                                ),
-                              ),
-                            ],
-                          ),
+                      SizedBox(height: 8.h),
+                      Text(
+                        '2 tortilla (approx 7-8” dia) (98g)',
+                        style: GoogleFonts.openSans(
+                          color: kBlueColor,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14.sp,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Kefir, flavored',
-                                    style: GoogleFonts.openSans(
-                                      color: kWhiteTextColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 16.sp,
-                                    ),
-                                  ),
-                                  Text(
-                                    '3 cup (720ml)',
-                                    style: GoogleFonts.openSans(
-                                      color: kDairyPortionTextColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 10.sp,
-                                    ),
-                                  ),
-                                ],
+                      ),
+                      SizedBox(height: 16.h),
+                      Container(
+                        height: 143.h,
+                        width: 346.w,
+                        color: const Color(0xff393C43),
+                        child: Column(
+                          children: [
+                            Text(
+                              textAlign: TextAlign.start,
+                              'Find brands with similar macros:',
+                              style: GoogleFonts.openSans(
+                                color: kWhiteTextColor,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14.sp,
                               ),
-                              Text(
-                                'Hel',
-                                style: GoogleFonts.openSans(
+                            ),
+                            SizedBox(height: 8.h),
+                            Text(
+                              '148cals, 4p, 4f, 22c',
+                              style: GoogleFonts.openSans(
+                                color: kBlueColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                            SizedBox(height: 8.h),
+                            Text(
+                              'per',
+                              style: GoogleFonts.openSans(
+                                color: kWhiteTextColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14.sp,
+                              ),
+                            ),
+                            SizedBox(height: 8.h),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Container(
+                                  height: 2.h,
+                                  width: 20.w,
                                   color: kWhiteTextColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16.sp,
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Fresh mozzarella cheese',
-                                    style: GoogleFonts.openSans(
-                                      color: kWhiteTextColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 16.sp,
-                                    ),
-                                  ),
-                                  Text(
-                                    '2 2/3 oz (76g)',
-                                    style: GoogleFonts.openSans(
-                                      color: kDairyPortionTextColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 10.sp,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Text(
-                                'Hel',
-                                style: GoogleFonts.openSans(
+                                Container(
+                                  height: 2.h,
+                                  width: 50.w,
                                   color: kWhiteTextColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16.sp,
+                                  child: Center(
+                                    child: Text(
+                                      '1',
+                                      style: GoogleFonts.openSans(
+                                        color: kWhiteTextColor,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 20.sp,
+                                      ),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
+                                Text(
+                                  '+',
+                                  style: GoogleFonts.openSans(
+                                    color: kWhiteTextColor,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24.sp,
+                                  ),
+                                ),
+                                Container(
+                                  height: 38.h,
+                                  width: 150.w,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(24),
+                                    border: const GradientBoxBorder(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topCenter,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Color(0xFF00FF8F),
+                                          Color(0xFF00A1FF)
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 8.w),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text(
+                                          'tortilla (approx 7)',
+                                          style: GoogleFonts.openSans(
+                                            color: kWhiteTextColor,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 12.sp,
+                                          ),
+                                        ),
+                                        const Icon(
+                                            Icons.keyboard_arrow_down_rounded,
+                                            color: kWhiteTextColor),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ],
+                      ),
+                      SizedBox(height: 16.h),
+                      Text(
+                        'Used in:',
+                        style: GoogleFonts.openSans(
+                          color: kWhiteTextColor,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14.sp,
+                        ),
+                      ),
+                      SizedBox(height: 16.h),
+                      Text(
+                        'Quick brownbag burritos',
+                        style: GoogleFonts.openSans(
+                          color: kBlueColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.sp,
+                        ),
+                      ),
+                      SizedBox(height: 16.h),
+                      Text(
+                        '2 tortilla (approx 7-8” dia) (98g)',
+                        style: GoogleFonts.openSans(
+                          color: kDarkGreyTextColor,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14.sp,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 import '../../../../../utils/app_colors.dart';
 import '../../../../../utils/app_images.dart';
-import 'groceryList2Controller/grocerylist2_controller.dart';
+import '../groceryList4/grocery_list4.dart';
+import 'groceryList3Controller/grocerylist3_controller.dart';
 
-class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
-  const GroceryList2Screen({super.key});
+class GroceryList3Screen extends GetView<GroceryList3ScreenController> {
+  const GroceryList3Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,9 @@ class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
         floatingActionButton: FloatingActionButton(
           backgroundColor: kBlueColor,
           shape: const CircleBorder(),
-          onPressed: () {},
+          onPressed: () {
+            Get.to(() => const GroceryList4Screen());
+          },
           child: Image.asset(kFloatingActionButtonImage,
               height: 30.h, width: 34.w),
         ),
@@ -88,7 +91,7 @@ class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
               SizedBox(height: 16.h),
               Container(
                 width: 343.w,
-                height: 150.h,
+                height: 94.h,
                 decoration: const BoxDecoration(
                   border: GradientBoxBorder(
                     gradient: LinearGradient(
@@ -98,12 +101,13 @@ class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
                     ),
                   ),
                 ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8.w),
+                      child: Text(
                         'List for:',
                         style: GoogleFonts.openSans(
                           color: kWhiteTextColor,
@@ -111,8 +115,11 @@ class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
                           fontSize: 14.sp,
                         ),
                       ),
-                      SizedBox(height: 8.h),
-                      Row(
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
@@ -120,15 +127,10 @@ class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
                             width: 102.w,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(6),
-                              border: const GradientBoxBorder(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color(0xFF00FF8F),
-                                    Color(0xFF00A1FF)
-                                  ],
-                                ),
+                              gradient: const LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [Color(0xFF00FF8F), Color(0xFF00A1FF)],
                               ),
                             ),
                             child: Center(
@@ -174,10 +176,15 @@ class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
                             width: 102.w,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(6),
-                              gradient: const LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [Color(0xFF00FF8F), Color(0xFF00A1FF)],
+                              border: const GradientBoxBorder(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Color(0xFF00FF8F),
+                                    Color(0xFF00A1FF)
+                                  ],
+                                ),
                               ),
                             ),
                             child: Center(
@@ -193,122 +200,14 @@ class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 8.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'First day',
-                            style: GoogleFonts.openSans(
-                              color: kWhiteTextColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12.sp,
-                            ),
-                          ),
-                          Text(
-                            '# of days',
-                            style: GoogleFonts.openSans(
-                              color: kWhiteTextColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12.sp,
-                            ),
-                          ),
-                          Text(
-                            'Batching ?',
-                            style: GoogleFonts.openSans(
-                              color: kWhiteTextColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12.sp,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 8.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 30.h,
-                            width: 112.w,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              border: const GradientBoxBorder(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color(0xFF00FF8F),
-                                    Color(0xFF00A1FF)
-                                  ],
-                                ),
-                              ),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  'Sat June 15th',
-                                  style: GoogleFonts.openSans(
-                                    color: kWhiteTextColor,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12.sp,
-                                  ),
-                                ),
-                                const Icon(Icons.keyboard_arrow_down_rounded,
-                                    color: kWhiteTextColor),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: 30.h,
-                            width: 112.w,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              border: const GradientBoxBorder(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color(0xFF00FF8F),
-                                    Color(0xFF00A1FF)
-                                  ],
-                                ),
-                              ),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  'Sat June 15th',
-                                  style: GoogleFonts.openSans(
-                                    color: kWhiteTextColor,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12.sp,
-                                  ),
-                                ),
-                                const Icon(Icons.keyboard_arrow_down_rounded,
-                                    color: kWhiteTextColor),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            'Todays:',
-                            style: GoogleFonts.openSans(
-                              color: kWhiteTextColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12.sp,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 32.h),
               Container(
                 width: 343.w,
-                height: 520.h,
+                height: 270.h,
                 color: kPercentIndicatorContainerColor,
                 child: Column(
                   children: [
@@ -443,114 +342,6 @@ class GroceryList2Screen extends GetView<GroceryList2ScreenController> {
                           ),
                         ),
                       ],
-                    ),
-                    Container(
-                      height: 50.h,
-                      width: double.infinity,
-                      color: kBlueColor,
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 13.h, horizontal: 16.w),
-                        child: Text(
-                          'BAKED PRODUCT',
-                          style: GoogleFonts.openSans(
-                            color: kWhiteTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14.sp,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Flour tortillas',
-                                style: GoogleFonts.openSans(
-                                  color: kWhiteTextColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16.sp,
-                                ),
-                              ),
-                              Text(
-                                '2 tortilla (approx 7-8” dia) (98g)',
-                                style: GoogleFonts.openSans(
-                                  color: kDairyPortionTextColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 10.sp,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            'Hel',
-                            style: GoogleFonts.openSans(
-                              color: kWhiteTextColor,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16.sp,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: 50.h,
-                      width: double.infinity,
-                      color: kBlueColor,
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 13.h, horizontal: 16.w),
-                        child: Text(
-                          'soups, sauces & graies',
-                          style: GoogleFonts.openSans(
-                            color: kWhiteTextColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14.sp,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Salsa',
-                                style: GoogleFonts.openSans(
-                                  color: kWhiteTextColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16.sp,
-                                ),
-                              ),
-                              Text(
-                                '2 tortilla (approx 7-8” dia) (98g)',
-                                style: GoogleFonts.openSans(
-                                  color: kDairyPortionTextColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 10.sp,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            'Hel',
-                            style: GoogleFonts.openSans(
-                              color: kWhiteTextColor,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16.sp,
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
                   ],
                 ),

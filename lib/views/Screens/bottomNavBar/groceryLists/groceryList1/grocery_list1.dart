@@ -1,12 +1,13 @@
-import 'package:fit_happens_pro/views/Screens/bottomNavBar/groceryLists/groceryList1Controller/grocerylist1_controller.dart';
+import 'package:fit_happens_pro/views/Screens/bottomNavBar/groceryLists/groceryList2/grocery_list2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
-import '../../../../utils/app_colors.dart';
-import '../../../../utils/app_images.dart';
+import '../../../../../utils/app_colors.dart';
+import '../../../../../utils/app_images.dart';
+import 'groceryList1Controller/grocerylist1_controller.dart';
 
 class GroceryList1Screen extends GetView<GroceryList1ScreenController> {
   const GroceryList1Screen({super.key});
@@ -15,11 +16,13 @@ class GroceryList1Screen extends GetView<GroceryList1ScreenController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff2C3A41),
+        backgroundColor: const Color(0xff2C3A41),
         floatingActionButton: FloatingActionButton(
           backgroundColor: kBlueColor,
           shape: const CircleBorder(),
-          onPressed: () {},
+          onPressed: () {
+            Get.to(() => const GroceryList2Screen());
+          },
           child: Image.asset(kFloatingActionButtonImage,
               height: 30.h, width: 34.w),
         ),
