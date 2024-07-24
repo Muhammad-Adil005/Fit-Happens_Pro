@@ -6,11 +6,13 @@ import 'package:fit_happens_pro/views/Screens/OnBoarding/plan_screen.dart';
 import 'package:fit_happens_pro/views/Screens/OnBoarding/plan_selection_screen.dart';
 import 'package:fit_happens_pro/views/Screens/OnBoarding/sex_screen.dart';
 import 'package:fit_happens_pro/views/Screens/bottomNavBar/RoutineMatchProfile/routine_match_profile_screen.dart';
+import 'package:fit_happens_pro/views/Screens/bottomNavBar/workout_overview/workout_overview_screen.dart';
 import 'package:fit_happens_pro/views/Screens/home/home_screen.dart';
 import 'package:get/get.dart';
 
 import '../views/Screens/auth/login/login_screen.dart';
 import '../views/Screens/auth/sign_up/sign_up_screen.dart';
+import '../views/Screens/bottomNavBar/edit_routine/edit_routine_screen.dart';
 import '../views/Screens/bottomNavBar/groceryLists/groceryList1/grocery_list1.dart';
 import '../views/Screens/bottomNavBar/groceryLists/groceryList2/grocery_list2.dart';
 import '../views/Screens/bottomNavBar/groceryLists/groceryList3/grocery_list3.dart';
@@ -74,6 +76,14 @@ class RouteGenerator {
       GetPage(
           name: kRoutineMatchProfileScreenRoute,
           page: () => const RoutineMatchProfileScreen(),
+          binding: ScreenBindings()),
+      GetPage(
+          name: kEditRouteScreenRoute,
+          page: () => const EditRoutineScreen(),
+          binding: ScreenBindings()),
+      GetPage(
+          name: kWorkOutOverviewScreenRoute,
+          page: () => const WorkOutOverviewScreen(),
           binding: ScreenBindings()),
     ];
   }

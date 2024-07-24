@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -385,6 +386,230 @@ class _HomeContentState extends State<HomeContent> {
                 ),
               ),
               SizedBox(height: 16.h),
+              /* Padding(
+                padding: const EdgeInsets.all(16),
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: [
+                    Container(
+                      height: 350,
+                      width: 165,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text('Walk',
+                                  style: GoogleFonts.openSans(
+                                    fontSize: 18.sp,
+                                    fontWeight: FontWeight.bold,
+                                    color: kBlackTextColor,
+                                  )),
+                              Icon(Icons.directions_walk),
+                            ],
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8),
+                              child: BarChart(
+                                BarChartData(
+                                  alignment: BarChartAlignment.spaceAround,
+                                  barTouchData: BarTouchData(enabled: false),
+                                  titlesData: FlTitlesData(
+                                    show: true,
+                                  ),
+                                  borderData: FlBorderData(show: false),
+                                  barGroups: [
+                                    BarChartGroupData(x: 0, barRods: [
+                                      BarChartRodData(
+                                        toY: 8,
+                                        color: Colors.lightBlueAccent,
+                                      )
+                                    ]),
+                                    BarChartGroupData(x: 1, barRods: [
+                                      BarChartRodData(
+                                        toY: 10,
+                                        color: Colors.lightBlueAccent,
+                                      )
+                                    ]),
+                                    BarChartGroupData(x: 2, barRods: [
+                                      BarChartRodData(
+                                        toY: 14,
+                                        color: Colors.lightBlueAccent,
+                                      )
+                                    ]),
+                                    BarChartGroupData(x: 3, barRods: [
+                                      BarChartRodData(
+                                        toY: 15,
+                                        color: Colors.lightBlueAccent,
+                                      )
+                                    ]),
+                                    BarChartGroupData(x: 4, barRods: [
+                                      BarChartRodData(
+                                        toY: 13,
+                                        color: Colors.lightBlueAccent,
+                                      )
+                                    ]),
+                                    BarChartGroupData(x: 5, barRods: [
+                                      BarChartRodData(
+                                        toY: 10,
+                                        color: Colors.lightBlueAccent,
+                                      )
+                                    ]),
+                                    BarChartGroupData(x: 6, barRods: [
+                                      BarChartRodData(
+                                        toY: 6,
+                                        color: Colors.lightBlueAccent,
+                                      )
+                                    ]),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 350,
+                      width: 165,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              CircularPercentIndicator(
+                                radius: 60,
+                                animation: true,
+                                animationDuration: 1200,
+                                lineWidth: 10,
+                                percent: 0.7,
+                                center: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "810",
+                                      style: GoogleFonts.openSans(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 24.sp,
+                                        color: kBlackTextColor,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Steps",
+                                      style: GoogleFonts.openSans(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 24.sp,
+                                        color: kBlackTextColor,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10.h),
+                                  ],
+                                ),
+                                circularStrokeCap: CircularStrokeCap.butt,
+                                backgroundColor: kWhiteTextColor,
+                                progressColor: kBlueColor,
+                                reverse: true,
+                              ),
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '6',
+                                style: GoogleFonts.openSans(
+                                  color: kBlackTextColor,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 24.sp,
+                                ),
+                              ),
+                              Text(
+                                'Hours',
+                                style: GoogleFonts.openSans(
+                                  color: kBlackTextColor,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 18.sp,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 350,
+                      width: 165,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                    ),
+                    Container(
+                      height: 350,
+                      width: 165,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),*/
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  reverse: false,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: [
+                    _buildChartCard(
+                      title: 'Walk',
+                      icon: Icons.directions_walk,
+                      color: Colors.green,
+                      chart: _buildPieChart(810),
+                      footerText: '810 Steps',
+                    ),
+                    _buildChartCard(
+                      title: 'Sleep',
+                      icon: Icons.nightlight_round,
+                      color: Colors.green,
+                      chart: _buildBarChart(6),
+                      footerText: '6 Hours',
+                    ),
+                    _buildChartCard(
+                      title: 'Water',
+                      icon: Icons.opacity,
+                      color: Colors.blue,
+                      chart: _buildLineChart(3),
+                      footerText: '3 Bottles',
+                    ),
+                    _buildChartCard(
+                      title: 'Heart',
+                      icon: Icons.favorite,
+                      color: Colors.blue,
+                      chart: _buildLineChart(95),
+                      footerText: '95 bpm',
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 16.h),
               Container(
                 width: 343.w,
                 height: 245.h,
@@ -722,6 +947,129 @@ class _HomeContentState extends State<HomeContent> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildChartCard({
+    required String title,
+    required IconData icon,
+    required Color color,
+    required Widget chart,
+    required String footerText,
+  }) {
+    return Card(
+      color: color,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Icon(
+                  icon,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+            Expanded(child: chart),
+            Text(
+              footerText,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPieChart(int steps) {
+    return PieChart(
+      PieChartData(
+        sections: [
+          PieChartSectionData(
+            value: steps.toDouble(),
+            color: Colors.blue,
+            radius: 50,
+            title: '$steps',
+            titleStyle: const TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          PieChartSectionData(
+            value: 1000 - steps.toDouble(),
+            color: Colors.white24,
+            radius: 50,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBarChart(int hours) {
+    return BarChart(
+      BarChartData(
+        borderData: FlBorderData(show: false),
+        titlesData: const FlTitlesData(show: false),
+        barGroups: List.generate(
+          7,
+          (index) => BarChartGroupData(
+            x: index,
+            barRods: [
+              BarChartRodData(
+                fromY: (index + 1) == 3
+                    ? hours.toDouble()
+                    : (index + 2).toDouble(),
+                color: Colors.blue,
+                width: 16,
+                toY: 1,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildLineChart(int value) {
+    return LineChart(
+      LineChartData(
+        borderData: FlBorderData(show: false),
+        titlesData: const FlTitlesData(show: false),
+        lineBarsData: [
+          LineChartBarData(
+            spots: [
+              const FlSpot(0, 1),
+              FlSpot(1, value.toDouble()),
+              const FlSpot(2, 3),
+              const FlSpot(3, 4),
+              const FlSpot(4, 3),
+              const FlSpot(5, 5),
+            ],
+            isCurved: true,
+            color: Colors.white,
+            barWidth: 3,
+            dotData: const FlDotData(show: false),
+          ),
+        ],
       ),
     );
   }

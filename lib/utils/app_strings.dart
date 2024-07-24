@@ -15,3 +15,5 @@ const String kGroceryList4ScreenRoute = "/groceryList4ScreenRoute";
 const String kWorkOutListDayScreenRoute = "/workOutListDayScreenRoute";
 const String kRoutineMatchProfileScreenRoute =
     "/routineMatchProfileScreenRoute";
+const String kEditRouteScreenRoute = "/editRouteScreenRoute";
+const String kWorkOutOverviewScreenRoute = "/workOutOverviewScreenRoute";

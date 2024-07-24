@@ -1,12 +1,15 @@
 import 'package:fit_happens_pro/utils/app_colors.dart';
+import 'package:fit_happens_pro/views/Screens/bottomNavBar/routinematchprofile/routine_match_profile_controller/routine_match_profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 import '../../../../utils/app_images.dart';
 
-class RoutineMatchProfileScreen extends StatelessWidget {
+class RoutineMatchProfileScreen
+    extends GetView<RoutineMatchProfileScreenController> {
   const RoutineMatchProfileScreen({super.key});
 
   @override
